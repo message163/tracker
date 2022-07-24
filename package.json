@@ -1,0 +1,21 @@
+{
+  "name": "zmy-tracker",
+  "version": "1.0.4",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
+  },
+  "keywords": ["前端","埋点","tracker"],
+  "author": "",
+  "files": ["dist"],
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^2.76.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-typescript2": "^0.32.1",
+    "typescript": "^4.7.4"
+  }
+}
