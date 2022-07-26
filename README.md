@@ -9,6 +9,7 @@ The usage is as follows
 
 
 ```js
+//接口上报
 import Tracker from 'zmy-tracker'
 
 const tr = new Tracker({
@@ -39,5 +40,31 @@ export interface DefaultOptons {
     extra: Record<string, any> | undefined,
     jsError:boolean
 }
+```
+Dom上报
+DOM escalation
+```js
+//  <button target-key="埋点值">按钮</button>
+//只要有target-key 就会自动上报
+const tr = new Tracker({
+    requestUrl:"http://localhost:3000/xxxx", //接口地址
+    domTracker:true
+})
+```
+
+用法
+usage
+```js
+const tr = new Tracker({
+    requestUrl:"http://localhost:3000/xxxx", //接口地址
+    historyTracker:true,
+    domTracker:true,
+    jsError:true,
+})
+//添加用户id
+tr.setUserId()
+
+//自定义上报 必须要有 event 和 targetKey  两个字段
+tr.sendTracker({xxx})
 ```
 
