@@ -14,8 +14,8 @@ export default class Tracker {
 
     private initDef(): DefaultOptons {
         this.version = TrackerConfig.version;
-        window.history['pushState'] = createHistoryEvnent("pushState")
-        window.history['replaceState'] = createHistoryEvnent('replaceState')
+        window.history['pushState'] = createHistoryEvent("pushState")
+        window.history['replaceState'] = createHistoryEvent('replaceState')
         return <DefaultOptons>{
 
             sdkVersion: this.version,
