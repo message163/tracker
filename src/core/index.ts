@@ -1,5 +1,5 @@
 import { DefaultOptons, Options, TrackerConfig, reportTrackerData } from "../types/core";
-import { createHistoryEvnent } from "../utils/pv";
+import { createHistoryEvent } from "../utils/pv";
 
 const MouseEventList: string[] = ['click', 'dblclick', 'contextmenu', 'mousedown', 'mouseup', 'mouseenter', 'mouseout', 'mouseover']
 
@@ -14,8 +14,8 @@ export default class Tracker {
 
     private initDef(): DefaultOptons {
         this.version = TrackerConfig.version;
-        window.history['pushState'] = createHistoryEvnent("pushState")
-        window.history['replaceState'] = createHistoryEvnent('replaceState')
+        window.history['pushState'] = createHistoryEvent("pushState")
+        window.history['replaceState'] = createHistoryEvent('replaceState')
         return <DefaultOptons>{
 
             sdkVersion: this.version,
