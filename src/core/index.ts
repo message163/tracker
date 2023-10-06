@@ -1,5 +1,5 @@
 import { DefaultOptons, Options, TrackerConfig, reportTrackerData } from "../types/core";
-import { createHistoryEvnent } from "../utils/pv";
+import { createHistoryEvent } from "../utils/pv";
 
 const MouseEventList: string[] = ['click', 'dblclick', 'contextmenu', 'mousedown', 'mouseup', 'mouseenter', 'mouseout', 'mouseover']
 
